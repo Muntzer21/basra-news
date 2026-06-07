@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news</title>
+    <style>
+        :root {
+  --border-color: #c14a4a;
+  /* --padding-size: 15px; */
+}
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+             /* font-family: Arial, sans-serif; */
+              font-family:
+        "Helvetica Neue",
+        "Segoe UI",
+        Tahoma,
+        Arial,
+        sans-serif;
+             background-color: #f5f8f8;
+             background-color: #f5f8f8;
+                 /* font-family: "HelveticaNeueReg"; */
+    font-display: swap;
+        }
+        header{
+
+            height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+            position: relative;
+            background-image: url("https://www.skynewsarabia.com/asset/1643203811/170BD5C69658AC9A6F704944FB706C91/assets/img/header/header_bg_v2.jpg");
+        }
+        header h1{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+             /* font-family: Tahoma, Arial, sans-serif; */
+              /* font-family: Tahoma, "Segoe UI", sans-serif; */
+            /* font-family: 'HelveticaNeueReg'; */
+        }
+        header span{
+            background-color: red;
+            color: white;
+            padding: 5px;
+        }
+      .navbar{
+        display: flex;
+        gap: 100px;
+        justify-content: center;
+        
+  list-style-type: none;
+      }
+
+      .navbar li{
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        /* transform: 0.3; */
+      }
+       li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: 0.4s;
+}
+      
+      li:hover{
+        cursor: pointer;
+        /* border-bottom: 3px solid rgb(193, 74, 74);
+       transform: translateY(-10px); */
+        border-bottom-color: var(--border-color);
+    transform: translateY(-2px);
+      }
+      a{
+        text-decoration: none;
+      }
+     .economy{
+    position: absolute;
+    /* display: inline-block; */
+    left: 120px;
+    background: #db191d;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    overflow: hidden;
+}
+/* .economy:: */
+.economy::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:white;
+    animation: slide 2s infinite;
+}
+
+@keyframes slide{
+    0%{
+        left:-100%;
+    }
+    50%{
+        left:100%;
+        /* background-color: var(--wit-color); */
+    }
+    100%{
+        left:100%;
+    }
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* margin-top: 30px; */
+    /* position: relative; */
+}
+article{
+    position: relative;
+     width:380px;
+    height:410px;
+    border: 3px solid transparent;
+       /* width:380px; */
+    background:white;
+    transition:0.3s;
+    /* padding: 10px; */
+    margin: 20px;
+    margin-top: 70px;
+}
+article img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+
+}
+article .text{
+    padding: 10px;
+
+}
+
+article:hover{
+    border-bottom-color: var(--border-color);
+     transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+section h2{
+    /* position: absolute;
+    right: 50px;
+    top: 120px; */
+    /* bottom: 30px; */
+}
+.section-title{
+    text-align: right;
+    font-size: 2rem;
+    margin: 20px 40px;
+    color: #222;
+    border-right: 5px solid #c14a4a;
+    padding-right: 12px;
+    position: absolute;
+    right: 80px;
+}
+ .info-card .back{
+    display:none;
+}
+
+.info-card.open .front{
+    display:none;
+}
+.text span{
+    color: blue;
+    font-weight: bold;
+}
+
+.info-card.open .back{
+    display:block;
+    padding: 10px;
+    margin: 10px;
+}
+.info-card.open .back h3{
+   padding: 4px;
+}
+.back-btn{
+    background:#c14a4a;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+}
+.info-card:hover{
+    cursor: pointer;
+}
+.back-btn:hover{
+    background:#a93b3b;
+    transform:translateY(-2px);
+}
+
+
+
+
+footer{
+    margin-top:80px;
+    background:#111827;
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.footer-content{
+    max-width:800px;
+    margin:auto;
+}
+
+.footer-content h3{
+    margin-bottom:15px;
+}
+
+.footer-content p{
+    color:#d1d5db;
+    margin-bottom:15px;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:20px 0;
+}
+
+.social-links a{
+    text-decoration:none;
+    color:white;
+    padding:10px 15px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:10px;
+    transition:.3s;
+}
+
+.social-links a:hover{
+    background:#c14a4a;
+}
+
+.copyright{
+    margin-top:20px;
+    font-size:.9rem;
+    color:#9ca3af;
+}
+
+@media screen and (max-width: 868px) {
+  /* CSS rules placed here only apply to screens 768px wide or smaller */
+  body {
+    /* background-color: lightblue; */
+  }
+  .navbar{
+    /* visibility: hidden; */
+    margin-top: 60px;
+    /* visibility: inherit; */
+  }
+  header{
+    position: relative;
+            height:120px;
+
+  }
+  .economy{
+    position: absolute;
+    /* width: 60px; */
+    left: 100px;
+    bottom: 60px;
+  }
+  .section-title{
+    /* margin-left: 90px; */
+    /* margin: 50px; */
+    margin-right: 0px;
+  }
+
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>news</span> البصرة</h1>
+
+        <a href="#kids" class="economy">
+عاجل
+</a>
+        <nav class="navbar">
+         <li><a href="#university" >هنا الجامعة</a></li>
+         <li><a href="#sport">الرياضة</a></li>
+         <li><a href="#info">معرفة</a></li>
+        </nav>
+    </header>
+    <main>
+        <section id="university">
+            <!-- <h2>هنا الجامعة</h2> -->
+            <h2 class="section-title">هنا الجامعة</h2>
+            <article  dir="rtl">
+                <img src="img-news/hepiq.png" alt="goodbye-season" >
+                <div class="text">
+
+                    <h3>هيبك</h3>
+                    <p>هيبك يعود من جديد ليشعل الاجواء ويجعل الطبة يتسائلون عن مستقبل هيبك؟</p>
+                </div>
+            </article>
+             <article  dir="rtl">
+                <img src="img-news/IMG_6118.jpg" alt="goodbye-season" >
+                <div class="text">
+
+                    <h3>وداعا</h3>
+                    <p>طلبة كلية علوم الحاسوب ينهون الموسم بصورة تذكارية مع الدكتور غيهب</p>
+                </div>
+            </article>
+             <article  dir="rtl">
+                <img src="img-news/graduate.png" alt="graduate" >
+                <div class="text">
+
+                    <h3>سنشتاق</h3>
+                    <p>احد الطلبة يلتقط صورة لتخرج زملائه ويقول بلسان طلبة الكلية سنشتاق لكم</p>
+                </div>
+            </article>
+        </section>
+        <section id="sport">
+            <!-- <h2>هنا الجامعة</h2> -->
+            <h2 class="section-title">الرياضة</h2>
+            <article  dir="rtl">
+                <img src="img-news/spain-iraq.avif" alt="goodbye-season" >
+                <div class="text">
+
+                    <h3>المفاجئة</h3>
+                    <p>العراق يفاجئ الجميع ويتعادل ايجابيا مع المرشح لكاس لعالم المنتخب الاسباني</p>
+                </div>
+            </article>
+             <article  dir="rtl">
+                <img src="img-news/iran-usa.png" alt="iran-usa" >
+                <div class="text">
+
+                    <h3>حربا رياضية؟</h3>
+                    <p>مبارة محتملة لايران وامريكا </p>
+                </div>
+            </article>
+             <article  dir="rtl">
+                <img src="img-news/error.png" alt="error electronic" >
+                <div class="text">
+
+                    <h3>وداعا لتذاكر المجانية</h3>
+                    <p>بسبب خطا الكتروني قررت فيف الغاء التذاكر المجانية للمونديال</p>
+                </div>
+            </article>
+        </section>
+        <section id="info">
+            <h2 class="section-title">معرفة</h2>
+            <article class="info-card" id="kids"  dir="rtl"  onclick="openCard(this)">
+                <div class="front">
+                <img src="img-news/kids.png" alt="info for kids" >
+                <div class="text">
+
+                    <h3>تحذير</h3>
+                    <p>يؤدي الضرب إلى تغييرات سلبية خطيرة ومثبتة علمياً في نمو دماغ الطفل، حيث يحفز استجابات عصبية ترتبط بالتوتر الشديد اضغط <span>هنا</span>.</p>
+                </div>
+                </div>
+                <div class="back">
+
+        <h2>التأثيرات الكاملة للضرب</h2>
+
+        <h3>تحذير: ضرب الأطفال يترك آثارًا لا تُرى</h3>
+        <p>
+            قد ينسى الطفل سبب الضربة، لكنه لا ينسى الشعور بالخوف والإهانة الذي رافقها. تشير دراسات نفسية وتربوية عديدة إلى أن الضرب لا يُعلّم الانضباط الحقيقي، بل قد يزرع القلق وضعف الثقة بالنفس ويؤثر في النمو العاطفي والسلوكي للطفل.
+        </p>
+
+        <h3>رسالة لك ايها القارئ</h3>
+        <p>قبل ان ترفع يدك على طفلا تذكر انه امانة من الاله لنا , فارحم من هو اضعف منك يرحمك من في السماء</p>
+        <button onclick="closeCard(event,this)" class="back-btn">رجوع</button>
+   
+    </div>
+            </article>
+           <article class="info-card"   dir="rtl"  onclick="openCard(this)">
+                <div class="front">
+                <img src="img-news/sport.png" alt="info for sports" >
+                <div class="text">
+
+                    <h3>حماية القلب</h3>
+                    <p>
+                      كشف بحث حديث أن ممارسة النشاط البدني بانتظام يساهم في خفض خطر الوفاة المبكرة بنسبة تصل إلى 40%.
+                    </p>
+                    <!-- <p>يؤدي الضرب إلى تغييرات سلبية خطيرة ومثبتة علمياً في نمو دماغ الطفل، حيث يحفز استجابات عصبية ترتبط بالتوتر الشديد اضغط <span>هنا</span>.</p> -->
+                </div>
+                </div>
+                <div class="back">
+
+        <h2>مجلة Nature Communications</h2>
+
+        <p>
+             أن زيادة الخطوات اليومية وحركة الجسم تخفف من المخاطر الصحية المرتبطة بالجلوس لفترات طويلة. ومع ذلك، أكد الباحثون أن النشاط البدني لا يعوض أو يلغي تماماً الأضرار الناجمة عن الخمول المفرط.
+        </p>
+        <p>
+    أظهرت دراسات حديثة نُشرت في Nature Communications فعالية التمارين المتقطعة عالية الكثافة (HIIT) في تقليل دهون البطن وتحسين وظائف المناعة بشكل يفوق التمارين المعتدلة. كما تشير النتائج إلى أهمية توقيت التمارين المسائية لتفادي اضطرابات النوم.
+        </p>
+        <button onclick="closeCard(event,this)" class="back-btn">رجوع</button>
+   
+    </div>
+            </article>
+             <article class="info-card"  dir="rtl"  onclick="openCard(this)">
+                <div class="front">
+                <img src="img-news/tree.png" alt="info for tree" >
+                <div class="text">
+
+                    <h3>فضل شجرة لزراعة منازل البصرة</h3>
+                    <p>تُعد شجرة السدر من أفضل الأشجار الملائمة لمناخ البصرة، لقدرتها العالية على تحمل الحرارة الشديدة والجفاف، إضافة إلى فوائدها البيئية والغذائية المتعددة.</p>
+                    <!-- <p>يؤدي الضرب إلى تغييرات سلبية خطيرة ومثبتة علمياً في نمو دماغ الطفل، حيث يحفز استجابات عصبية ترتبط بالتوتر الشديد اضغط <span>هنا</span>.</p> -->
+                </div>
+                </div>
+                <div class="back">
+
+        <!-- <h2>التأثيرات الكاملة للضرب</h2> -->
+        <h2>شجرة السدر</h2>
+
+        <!-- <h3>تحذير: ضرب الأطفال يترك آثارًا لا تُرى</h3> -->
+        
+        <p>
+            تتميز محافظة البصرة بصيف طويل شديد الحرارة ودرجات حرارة قد تتجاوز 50 درجة مئوية، لذلك تحتاج الأشجار المزروعة فيها إلى قدرة عالية على تحمل الظروف المناخية القاسية.
+
+وتُعتبر شجرة السدر من أفضل الخيارات، إذ تتحمل الحرارة والجفاف وملوحة التربة أكثر من كثير من الأشجار الأخرى. كما توفر ظلاً جيداً وتُنتج ثمار النبق التي تحتوي على عناصر غذائية مفيدة.
+
+ومن فوائد شجرة السدر:
+
+توفير الظل وتقليل حرارة البيئة المحيطة.
+مقاومة الجفاف وقلة الحاجة إلى الري المتكرر.
+إنتاج ثمار صالحة للأكل.
+جذب النحل والمساهمة في إنتاج العسل.
+المساعدة في تحسين جودة الهواء وتقليل الغبار.
+
+نصيحة: زراعة شجرة واحدة أمام المنزل قد تخفض درجة الحرارة المحيطة عدة درجات خلال أشهر الصيف، وتُعد استثماراً بيئياً يستفيد منه الجميع لسنوات طويلة.
+        </p>
+        <button onclick="closeCard(event,this)" class="back-btn">رجوع</button>
+   
+    </div>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+    <div class="footer-content">
+
+        <h3>البصرة نيوز</h3>
+
+        <p>
+            نسأل الله التوفيق والسداد لنا ولكم
+        </p>
+
+        <p>
+            إذا كان لديك اقتراح أو ملاحظة، يسعدني التواصل معك عبر
+        </p>
+        <p>
+            ملاحظة انا موجود في صورة الدكتور غيهب في اقصى اليسار
+        </p>
+
+        <div class="social-links">
+            <a href="https://t.me/muntizr"> حسابي في التلجرام</a>
+            <a href="https://t.me/basrah_news1">قناتنا على التلجرام</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 جميع الحقوق محفوظة
+        </p>
+
+    </div>
+</footer>
+    <script>
+function openCard(card){
+    card.classList.add("open");
+}
+
+function closeCard(event,btn){
+    event.stopPropagation();
+
+    btn.closest(".info-card")
+       .classList.remove("open");
+}
+</script>
+</body>
+</html>
